@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<!-- Metadatos, tipografías y hojas de estilo de esta página. -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inicio · Colegio Don Bosco</title>
+<meta name="description" content="Colegio Don Bosco Central, Santa Cruz de la Sierra.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/index.css">
+<!-- Datos editables, componentes dinámicos y lógica compartida. -->
+<link rel="stylesheet" href="css/carruseles.css">
+<script src="js/contenido.js" defer></script>
+<script src="js/componentes.js" defer></script>
+<script src="js/main.js" defer></script>
+</head>
+<body>
+<!-- Encabezado compartido: se carga desde partials/header.html. -->
+<div id="header-placeholder">
+</div>
+<main>
+<!-- Sección: inicio. -->
+<section class="hero" id="inicio">
+<div class="img" role="img" aria-label="Estudiantes en el campus">
+</div>
+<div class="wrap">
+<h1>Formando <em>líderes cristianos</em> para la vida</h1>
+<div class="orn">
+<i>
+</i>
+<b>
+</b>
+<i>
+</i>
+</div>
+<a class="btn-i" href="#informacion">Inicia tu camino</a>
+</div>
+<div class="gold-line">
+</div>
+</section>
+<!-- Sección: bienvenida. -->
+<section class="sec" id="bienvenida">
+<div class="wrap split">
+<div>
+<div class="eyebrow">Bienvenidos</div>
+<h2>Bienvenidos al Colegio Don Bosco</h2>
+<p>Somos una comunidad educativa católica en Santa Cruz de la Sierra, inspirada en San Juan Bosco. Acompañamos a niños y jóvenes desde sus primeros años hasta su graduación, con cercanía, alegría y exigencia.</p>
+<p>Las familias pueden consultar por becas y opciones de ayuda económica. Queremos que una educación de calidad esté al alcance de quienes buscan formar a sus hijos en la fe y en los valores.</p>
+<a class="btn-i wine" href="#informacion" style="margin-top:8px">Solicitar información</a>
+</div>
+<div class="frame">
+<div class="ph" style="background-image:linear-gradient(135deg,rgba(11,31,75,.15),rgba(110,20,40,.15)),url('https://images.unsplash.com/photo-1771765812031-22653b4c70a6?auto=format&fit=crop&w=1200&q=70'),linear-gradient(135deg,#0B1F4B,#16306B)">
+</div>
+</div>
+</div>
+</section>
+<!-- Sección: instalaciones. -->
+<section class="sec bg-cream" id="instalaciones">
+<div class="wrap">
+<div class="head">
+<div class="eyebrow">Vida escolar</div>
+<h2>Nuestras instalaciones</h2>
+<p>Espacios pensados para aprender, jugar, orar y compartir.</p>
+<div class="orn">
+<i>
+</i>
+<b>
+</b>
+<i>
+</i>
+</div>
+</div>
+<!-- El contenido se configura en INSTALACIONES_INICIO de js/contenido.js. -->
+<div id="carrusel-instalaciones"></div>
+</div>
+</section>
+<!-- Sección: vision. -->
+<section class="sec bg-cream" id="vision">
+<div class="wrap">
+<div class="head">
+<div class="eyebrow">Nuestra visión</div>
+<h2>Formación integral</h2>
+<p>Creemos en una educación que atiende a toda la persona. Con el Sistema Preventivo de Don Bosco (razón, religión y amor) acompañamos el crecimiento de cada estudiante en cuatro dimensiones.</p>
+<div class="orn">
+<i>
+</i>
+<b>
+</b>
+<i>
+</i>
+</div>
+</div>
+<div class="g4">
+<div class="card">
+<div class="ic">
+<svg viewBox="0 0 24 24">
+<path d="M4 5h6a2 2 0 0 1 2 2v13a2 2 0 0 0-2-2H4zM20 5h-6a2 2 0 0 0-2 2v13a2 2 0 0 1 2-2h6z"/>
+</svg>
+</div>
+<h3>Intelectual</h3>
+<p>Pensamiento crítico, excelencia académica y amor por aprender.</p>
+</div>
+<div class="card">
+<div class="ic">
+<svg viewBox="0 0 24 24">
+<circle cx="12" cy="8" r="3.5"/>
+<path d="M5 20c0-4 3-6 7-6s7 2 7 6"/>
+</svg>
+</div>
+<h3>Humana</h3>
+<p>Carácter, virtudes y madurez emocional para la vida en comunidad.</p>
+</div>
+<div class="card">
+<div class="ic">
+<svg viewBox="0 0 24 24">
+<path d="M12 3v18M6 9h12"/>
+</svg>
+</div>
+<h3>Espiritual</h3>
+<p>Una fe viva que se encuentra con Dios en la oración y los sacramentos.</p>
+</div>
+<div class="card">
+<div class="ic">
+<svg viewBox="0 0 24 24">
+<path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/>
+</svg>
+</div>
+<h3>Solidaria</h3>
+<p>Servicio a los demás y compromiso con la sociedad.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Sección: mision. -->
+<section class="sec bg-navy light" id="mision">
+<div class="wrap split">
+<div>
+<div class="eyebrow" style="color:var(--gold-l)">Nuestra misión</div>
+<h2 style="color:#fff">Educar evangelizando, evangelizar educando</h2>
+<p style="color:#c8d1ea">Nuestra misión es formar buenos cristianos y honrados ciudadanos, acompañando a cada estudiante con el estilo de Don Bosco: presencia amable, confianza y alegría.</p>
+<p style="color:#c8d1ea">Conoce a nuestra comunidad en este video.</p>
+</div>
+<div class="video" id="video">
+<button type="button" class="vin" id="vin" aria-label="Reproducir video institucional">
+<div class="play">
+</div>
+<div class="vcap">Ver video</div>
+</button>
+<div class="vmsg" id="vmsg">Aún no hay un video configurado. Pronto compartiremos el video de nuestra comunidad.</div>
+</div>
+</div>
+</section>
+<!-- Sección: red. -->
+<section class="sec bg-wine light" id="red">
+<div class="wrap" style="text-align:center;max-width:900px">
+<div class="eyebrow" style="color:var(--gold-l)">Familia Salesiana</div>
+<h2 style="font-size:clamp(2rem,4vw,3rem);margin-bottom:16px">Parte de una red salesiana mundial</h2>
+<div class="orn" style="margin-bottom:22px">
+<i>
+</i>
+<b>
+</b>
+<i>
+</i>
+</div>
+<p style="color:#f1dfe3">Somos parte de la gran Familia Salesiana, presente en más de 130 países, que trabaja por la educación de los jóvenes, especialmente de los más necesitados.</p>
+<div class="net">
+<div>
+<b>130+</b>
+<span>Países</span>
+</div>
+<div>
+<b>1859</b>
+<span>Fundación de la Congregación</span>
+</div>
+<div>
+<b>1</b>
+<span>Misión: los jóvenes</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Sección: informacion. -->
+<section class="sec" id="informacion" style="background:var(--cream)">
+<div class="col">
+<div class="eyebrow">Admisiones</div>
+<h2 style="font-size:clamp(2rem,4vw,3rem);color:var(--navy);margin-bottom:16px">Solicita información</h2>
+<p style="color:var(--muted);margin-bottom:34px">Cuéntanos qué te interesa y nos pondremos en contacto contigo.</p>
+<form class="f formsubmit" method="post" data-subject="Solicitud de información">
+<div class="row2">
+<div>
+<label class="t" for="info-nombre">Nombre completo</label>
+<input id="info-nombre" name="Nombre" type="text" autocomplete="name" required>
+</div>
+<div>
+<label class="t" for="info-telefono">Teléfono</label>
+<input id="info-telefono" name="Teléfono" type="tel" autocomplete="tel" required>
+</div>
+</div>
+<label class="t" for="info-email">Correo electrónico</label>
+<input id="info-email" name="email" type="email" autocomplete="email" required>
+<fieldset>
+<legend>Áreas de interés</legend>
+<span class="hint">Marca las opciones que correspondan</span>
+<div class="checks">
+<label>
+<input type="checkbox" name="Intereses" value="Información general"> Información general</label>
+<label>
+<input type="checkbox" name="Intereses" value="Visita"> Visita al colegio</label>
+<label>
+<input type="checkbox" name="Intereses" value="Admisiones"> Admisiones</label>
+<label>
+<input type="checkbox" name="Intereses" value="Becas"> Becas</label>
+</div>
+</fieldset>
+<label class="t" for="info-mensaje">Mensaje (opcional)</label>
+<textarea id="info-mensaje" name="Mensaje" rows="4"></textarea>
+<input type="hidden" name="_subject" value="Solicitud de información">
+<button class="btn" type="submit">Solicitar información</button>
+<p class="form-status" role="status" aria-live="polite">
+</p>
+</form>
+</div>
+</section>
+</main>
+<!-- Pie compartido: se carga desde partials/footer.html. -->
+<div id="footer-placeholder">
+</div>
+</body>
+</html>
