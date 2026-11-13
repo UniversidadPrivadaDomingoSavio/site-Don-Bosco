@@ -1,233 +1,711 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-<!-- Metadatos, tipografías y hojas de estilo de esta página. -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Inicio · Colegio Don Bosco</title>
-<meta name="description" content="Colegio Don Bosco Central, Santa Cruz de la Sierra.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="css/index.css">
-<!-- Datos editables, componentes dinámicos y lógica compartida. -->
-<link rel="stylesheet" href="css/carruseles.css">
-<script src="js/contenido.js" defer></script>
-<script src="js/componentes.js" defer></script>
-<script src="js/main.js" defer></script>
-</head>
-<body>
-<!-- Encabezado compartido: se carga desde partials/header.html. -->
-<div id="header-placeholder">
-</div>
-<main>
-<!-- Sección: inicio. -->
-<section class="hero" id="inicio">
-<div class="img" role="img" aria-label="Estudiantes en el campus">
-</div>
-<div class="wrap">
-<h1>Formando <em>líderes cristianos</em> para la vida</h1>
-<div class="orn">
-<i>
-</i>
-<b>
-</b>
-<i>
-</i>
-</div>
-<a class="btn-i" href="#informacion">Inicia tu camino</a>
-</div>
-<div class="gold-line">
-</div>
-</section>
-<!-- Sección: bienvenida. -->
-<section class="sec" id="bienvenida">
-<div class="wrap split">
-<div>
-<div class="eyebrow">Bienvenidos</div>
-<h2>Bienvenidos al Colegio Don Bosco</h2>
-<p>Somos una comunidad educativa católica en Santa Cruz de la Sierra, inspirada en San Juan Bosco. Acompañamos a niños y jóvenes desde sus primeros años hasta su graduación, con cercanía, alegría y exigencia.</p>
-<p>Las familias pueden consultar por becas y opciones de ayuda económica. Queremos que una educación de calidad esté al alcance de quienes buscan formar a sus hijos en la fe y en los valores.</p>
-<a class="btn-i wine" href="#informacion" style="margin-top:8px">Solicitar información</a>
-</div>
-<div class="frame">
-<div class="ph" style="background-image:linear-gradient(135deg,rgba(11,31,75,.15),rgba(110,20,40,.15)),url('https://images.unsplash.com/photo-1771765812031-22653b4c70a6?auto=format&fit=crop&w=1200&q=70'),linear-gradient(135deg,#0B1F4B,#16306B)">
-</div>
-</div>
-</div>
-</section>
-<!-- Sección: instalaciones. -->
-<section class="sec bg-cream" id="instalaciones">
-<div class="wrap">
-<div class="head">
-<div class="eyebrow">Vida escolar</div>
-<h2>Nuestras instalaciones</h2>
-<p>Espacios pensados para aprender, jugar, orar y compartir.</p>
-<div class="orn">
-<i>
-</i>
-<b>
-</b>
-<i>
-</i>
-</div>
-</div>
-<!-- El contenido se configura en INSTALACIONES_INICIO de js/contenido.js. -->
-<div id="carrusel-instalaciones"></div>
-</div>
-</section>
-<!-- Sección: vision. -->
-<section class="sec bg-cream" id="vision">
-<div class="wrap">
-<div class="head">
-<div class="eyebrow">Nuestra visión</div>
-<h2>Formación integral</h2>
-<p>Creemos en una educación que atiende a toda la persona. Con el Sistema Preventivo de Don Bosco (razón, religión y amor) acompañamos el crecimiento de cada estudiante en cuatro dimensiones.</p>
-<div class="orn">
-<i>
-</i>
-<b>
-</b>
-<i>
-</i>
-</div>
-</div>
-<div class="g4">
-<div class="card">
-<div class="ic">
-<svg viewBox="0 0 24 24">
-<path d="M4 5h6a2 2 0 0 1 2 2v13a2 2 0 0 0-2-2H4zM20 5h-6a2 2 0 0 0-2 2v13a2 2 0 0 1 2-2h6z"/>
-</svg>
-</div>
-<h3>Intelectual</h3>
-<p>Pensamiento crítico, excelencia académica y amor por aprender.</p>
-</div>
-<div class="card">
-<div class="ic">
-<svg viewBox="0 0 24 24">
-<circle cx="12" cy="8" r="3.5"/>
-<path d="M5 20c0-4 3-6 7-6s7 2 7 6"/>
-</svg>
-</div>
-<h3>Humana</h3>
-<p>Carácter, virtudes y madurez emocional para la vida en comunidad.</p>
-</div>
-<div class="card">
-<div class="ic">
-<svg viewBox="0 0 24 24">
-<path d="M12 3v18M6 9h12"/>
-</svg>
-</div>
-<h3>Espiritual</h3>
-<p>Una fe viva que se encuentra con Dios en la oración y los sacramentos.</p>
-</div>
-<div class="card">
-<div class="ic">
-<svg viewBox="0 0 24 24">
-<path d="M12 20s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 10c0 5.5-7 10-7 10z"/>
-</svg>
-</div>
-<h3>Solidaria</h3>
-<p>Servicio a los demás y compromiso con la sociedad.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Sección: mision. -->
-<section class="sec bg-navy light" id="mision">
-<div class="wrap split">
-<div>
-<div class="eyebrow" style="color:var(--gold-l)">Nuestra misión</div>
-<h2 style="color:#fff">Educar evangelizando, evangelizar educando</h2>
-<p style="color:#c8d1ea">Nuestra misión es formar buenos cristianos y honrados ciudadanos, acompañando a cada estudiante con el estilo de Don Bosco: presencia amable, confianza y alegría.</p>
-<p style="color:#c8d1ea">Conoce a nuestra comunidad en este video.</p>
-</div>
-<div class="video" id="video">
-<button type="button" class="vin" id="vin" aria-label="Reproducir video institucional">
-<div class="play">
-</div>
-<div class="vcap">Ver video</div>
-</button>
-<div class="vmsg" id="vmsg">Aún no hay un video configurado. Pronto compartiremos el video de nuestra comunidad.</div>
-</div>
-</div>
-</section>
-<!-- Sección: red. -->
-<section class="sec bg-wine light" id="red">
-<div class="wrap" style="text-align:center;max-width:900px">
-<div class="eyebrow" style="color:var(--gold-l)">Familia Salesiana</div>
-<h2 style="font-size:clamp(2rem,4vw,3rem);margin-bottom:16px">Parte de una red salesiana mundial</h2>
-<div class="orn" style="margin-bottom:22px">
-<i>
-</i>
-<b>
-</b>
-<i>
-</i>
-</div>
-<p style="color:#f1dfe3">Somos parte de la gran Familia Salesiana, presente en más de 130 países, que trabaja por la educación de los jóvenes, especialmente de los más necesitados.</p>
-<div class="net">
-<div>
-<b>130+</b>
-<span>Países</span>
-</div>
-<div>
-<b>1859</b>
-<span>Fundación de la Congregación</span>
-</div>
-<div>
-<b>1</b>
-<span>Misión: los jóvenes</span>
-</div>
-</div>
-</div>
-</section>
-<!-- Sección: informacion. -->
-<section class="sec" id="informacion" style="background:var(--cream)">
-<div class="col">
-<div class="eyebrow">Admisiones</div>
-<h2 style="font-size:clamp(2rem,4vw,3rem);color:var(--navy);margin-bottom:16px">Solicita información</h2>
-<p style="color:var(--muted);margin-bottom:34px">Cuéntanos qué te interesa y nos pondremos en contacto contigo.</p>
-<form class="f formsubmit" method="post" data-subject="Solicitud de información">
-<div class="row2">
-<div>
-<label class="t" for="info-nombre">Nombre completo</label>
-<input id="info-nombre" name="Nombre" type="text" autocomplete="name" required>
-</div>
-<div>
-<label class="t" for="info-telefono">Teléfono</label>
-<input id="info-telefono" name="Teléfono" type="tel" autocomplete="tel" required>
-</div>
-</div>
-<label class="t" for="info-email">Correo electrónico</label>
-<input id="info-email" name="email" type="email" autocomplete="email" required>
-<fieldset>
-<legend>Áreas de interés</legend>
-<span class="hint">Marca las opciones que correspondan</span>
-<div class="checks">
-<label>
-<input type="checkbox" name="Intereses" value="Información general"> Información general</label>
-<label>
-<input type="checkbox" name="Intereses" value="Visita"> Visita al colegio</label>
-<label>
-<input type="checkbox" name="Intereses" value="Admisiones"> Admisiones</label>
-<label>
-<input type="checkbox" name="Intereses" value="Becas"> Becas</label>
-</div>
-</fieldset>
-<label class="t" for="info-mensaje">Mensaje (opcional)</label>
-<textarea id="info-mensaje" name="Mensaje" rows="4"></textarea>
-<input type="hidden" name="_subject" value="Solicitud de información">
-<button class="btn" type="submit">Solicitar información</button>
-<p class="form-status" role="status" aria-live="polite">
-</p>
-</form>
-</div>
-</section>
-</main>
-<!-- Pie compartido: se carga desde partials/footer.html. -->
-<div id="footer-placeholder">
-</div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Inicio · Colegio Don Bosco</title>
+
+    <meta
+      name="description"
+      content="Colegio Don Bosco Central, Santa Cruz de la Sierra."
+    />
+
+    <!-- TIPOGRAFÍAS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ESTILOS: compartidos + exclusivos del inicio -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/index.css" />
+
+    <!--
+    main.js conserva la inyección del header y footer,
+    la navegación y el funcionamiento del formulario.
+  -->
+    <script src="js/main.js" defer></script>
+
+    <!-- ICONOS -->
+    <script
+      src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"
+      defer
+    ></script>
+  </head>
+
+  <body class="inicio-page">
+    <!-- Se carga desde partials/header.html. -->
+    <div id="header-placeholder"></div>
+
+    <main>
+      <!-- ===================================================
+         PORTADA
+
+         Cambia únicamente src para sustituir la fotografía.
+         Ejemplo local: src="assets/img/portada.webp"
+
+         object-position controla el encuadre:
+         center 30% / center / center top.
+         =================================================== -->
+      <section class="hero" id="inicio">
+        <!-- VIDEO DE PORTADA -->
+        <video
+          class="hero-video"
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="metadata"
+          aria-hidden="true"
+        >
+          <source src="assets/video/portada.mp4" type="video/mp4" />
+        </video>
+
+        <div class="wrap">
+          <h1>
+            Formando <em>buenos cristianos y honrados ciudadanos</em>
+            para la vida
+          </h1>
+
+          <div class="orn" aria-hidden="true"><i></i><b></b><i></i></div>
+
+          <a class="btn-i" href="#informacion"> Inicia tu camino </a>
+        </div>
+
+        <div class="gold-line" aria-hidden="true"></div>
+      </section>
+
+      <!-- ===================================================
+         BIENVENIDA · FONDO BLANCO
+         =================================================== -->
+      <section class="sec" id="bienvenida" aria-labelledby="bienvenida-titulo">
+        <div class="wrap split">
+          <div>
+            <div class="eyebrow">Bienvenidos</div>
+
+            <h2 id="bienvenida-titulo">Bienvenidos al Colegio Don Bosco</h2>
+
+            <p>
+              Somos una comunidad educativa católica en Santa Cruz de la Sierra,
+              inspirada en San Juan Bosco. Acompañamos a niños y jóvenes desde
+              sus primeros años hasta su graduación, con cercanía, alegría y
+              exigencia.
+            </p>
+
+            <p>
+              Las familias pueden consultar por becas y opciones de ayuda
+              económica. Queremos que una educación de calidad esté al alcance
+              de quienes buscan formar a sus hijos en la fe y en los valores.
+            </p>
+
+            <a class="btn-i wine bienvenida-cta" href="#informacion">
+              Solicitar información
+            </a>
+          </div>
+
+          <div class="frame">
+            <div class="bienvenida-foto">
+              <!--
+              IMAGEN DE BIENVENIDA
+              Ejemplo local: src="assets/img/bienvenida.webp"
+            -->
+              <img
+                src="https://images.unsplash.com/photo-1771765812031-22653b4c70a6?auto=format&fit=crop&w=1200&q=70"
+                alt="Espacios de nuestra comunidad educativa"
+                loading="lazy"
+                decoding="async"
+                style="object-position: center"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================
+         INSTALACIONES · FONDO CREMA
+
+         Las imágenes se editan en el arreglo INSTALACIONES,
+         ubicado en el script al final de este archivo.
+         =================================================== -->
+      <section
+        class="sec"
+        id="instalaciones"
+        aria-labelledby="instalaciones-titulo"
+      >
+        <div class="wrap">
+          <div class="head">
+            <div class="eyebrow">Vida escolar</div>
+
+            <h2 id="instalaciones-titulo">Nuestras instalaciones</h2>
+
+            <p>Espacios pensados para aprender, jugar, orar y compartir.</p>
+
+            <div class="orn" aria-hidden="true"><i></i><b></b><i></i></div>
+          </div>
+
+          <div
+            class="inicio-slider"
+            role="region"
+            aria-roledescription="carrusel"
+            aria-labelledby="instalaciones-titulo"
+          >
+            <p id="instalaciones-ayuda" class="inicio-sr-only">
+              Usa las flechas izquierda y derecha para cambiar de imagen.
+              También puedes deslizar con el dedo.
+            </p>
+
+            <!-- Las diapositivas se crean automáticamente. -->
+            <div
+              class="inicio-track"
+              id="instalaciones-track"
+              tabindex="0"
+              role="group"
+              aria-label="Fotografías de las instalaciones"
+              aria-describedby="instalaciones-ayuda"
+            ></div>
+
+            <div class="inicio-slider-controles" id="instalaciones-controles">
+              <button
+                type="button"
+                id="instalaciones-anterior"
+                aria-label="Imagen anterior"
+                aria-controls="instalaciones-track"
+              >
+                <span aria-hidden="true">←</span>
+              </button>
+
+              <p
+                class="inicio-slider-contador"
+                id="instalaciones-contador"
+                aria-live="polite"
+                aria-atomic="true"
+              ></p>
+
+              <button
+                type="button"
+                id="instalaciones-siguiente"
+                aria-label="Imagen siguiente"
+                aria-controls="instalaciones-track"
+              >
+                <span aria-hidden="true">→</span>
+              </button>
+            </div>
+
+            <p class="inicio-slider-aviso" id="instalaciones-aviso" hidden>
+              Próximamente compartiremos fotografías de nuestras instalaciones.
+            </p>
+
+            <noscript>
+              Activa JavaScript para explorar las fotografías de las
+              instalaciones.
+            </noscript>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================
+         PILARES · FONDO BLANCO
+
+         Se conserva id="vision" para mantener los enlaces.
+         =================================================== -->
+      <section
+        class="sec pilares-section"
+        id="vision"
+        aria-labelledby="pilares-titulo"
+      >
+        <div class="wrap">
+          <div class="head">
+            <div class="eyebrow">Nuestra esencia educativa</div>
+
+            <h2 id="pilares-titulo">Pilares de la salesianidad</h2>
+
+            <p>
+              Inspirados en el Sistema Preventivo de San Juan Bosco, educamos
+              desde la razón, la religión y el amor, acompañando a cada
+              estudiante en su formación integral.
+            </p>
+
+            <div class="orn" aria-hidden="true"><i></i><b></b><i></i></div>
+          </div>
+
+          <ul class="pilares-grid">
+            <li class="pilar">
+              <div class="pilar-capitel" aria-hidden="true"></div>
+
+              <div class="pilar-cuerpo">
+                <div class="pilar-icono">
+                  <i data-lucide="book-open" aria-hidden="true"></i>
+                </div>
+
+                <h3>Razón</h3>
+                <span class="pilar-subtitulo">Diálogo y reflexión</span>
+
+                <p>
+                  Promovemos el diálogo y la comprensión para aprender a tomar
+                  decisiones con libertad y responsabilidad.
+                </p>
+              </div>
+
+              <div class="pilar-base" aria-hidden="true"></div>
+            </li>
+
+            <li class="pilar">
+              <div class="pilar-capitel" aria-hidden="true"></div>
+
+              <div class="pilar-cuerpo">
+                <div class="pilar-icono">
+                  <i data-lucide="church" aria-hidden="true"></i>
+                </div>
+
+                <h3>Religión</h3>
+                <span class="pilar-subtitulo">Fe y servicio</span>
+
+                <p>
+                  Cultivamos la fe y los valores cristianos, viviendo con
+                  esperanza y compromiso de servicio a los demás.
+                </p>
+              </div>
+
+              <div class="pilar-base" aria-hidden="true"></div>
+            </li>
+
+            <li class="pilar">
+              <div class="pilar-capitel" aria-hidden="true"></div>
+
+              <div class="pilar-cuerpo">
+                <div class="pilar-icono">
+                  <i data-lucide="heart-handshake" aria-hidden="true"></i>
+                </div>
+
+                <h3>Amor</h3>
+                <span class="pilar-subtitulo">Amorevolezza</span>
+
+                <p>
+                  Educamos con cariño, cercanía y confianza, para que cada
+                  estudiante se sienta querido y acompañado.
+                </p>
+              </div>
+
+              <div class="pilar-base" aria-hidden="true"></div>
+            </li>
+          </ul>
+
+          <p class="pilares-lema">“Buenos cristianos y honrados ciudadanos”</p>
+        </div>
+      </section>
+
+      <!-- ===================================================
+         RED SALESIANA · FONDO GUINDO
+         =================================================== -->
+      <section class="sec" id="red" aria-labelledby="red-titulo">
+        <div class="wrap red-contenido">
+          <div class="head">
+            <div class="eyebrow">Familia Salesiana</div>
+
+            <h2 id="red-titulo">Parte de una red salesiana mundial</h2>
+
+            <p>
+              Somos parte de la gran Familia Salesiana, presente en más de 130
+              países, que trabaja por la educación de los jóvenes, especialmente
+              de los más necesitados.
+            </p>
+
+            <div class="orn" aria-hidden="true"><i></i><b></b><i></i></div>
+          </div>
+
+          <div class="net">
+            <div>
+              <b>130+</b>
+              <span>Países</span>
+            </div>
+
+            <div>
+              <b>1859</b>
+              <span>Fundación de la Congregación</span>
+            </div>
+
+            <div>
+              <b>1</b>
+              <span>Misión: los jóvenes</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================
+         INFORMACIÓN · FONDO CREMA
+         =================================================== -->
+      <section
+        class="sec"
+        id="informacion"
+        aria-labelledby="informacion-titulo"
+      >
+        <div class="col">
+          <div class="head">
+            <div class="eyebrow">Admisiones</div>
+
+            <h2 id="informacion-titulo">Solicita información</h2>
+
+            <p>
+              Cuéntanos qué te interesa y nos pondremos en contacto contigo.
+            </p>
+
+            <div class="orn" aria-hidden="true"><i></i><b></b><i></i></div>
+          </div>
+
+          <form
+            class="f formsubmit"
+            method="post"
+            data-subject="Solicitud de información"
+          >
+            <div class="row2">
+              <div>
+                <label class="t" for="info-nombre">Nombre completo</label>
+                <input
+                  id="info-nombre"
+                  name="Nombre"
+                  type="text"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+
+              <div>
+                <label class="t" for="info-telefono">Teléfono</label>
+                <input
+                  id="info-telefono"
+                  name="Teléfono"
+                  type="tel"
+                  autocomplete="tel"
+                  required
+                />
+              </div>
+            </div>
+
+            <label class="t" for="info-email">Correo electrónico</label>
+            <input
+              id="info-email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              required
+            />
+
+            <fieldset>
+              <legend>Áreas de interés</legend>
+              <span class="hint">Marca las opciones que correspondan</span>
+
+              <div class="checks">
+                <label>
+                  <input
+                    type="checkbox"
+                    name="Intereses"
+                    value="Información general"
+                  />
+                  Información general
+                </label>
+
+                <label>
+                  <input type="checkbox" name="Intereses" value="Visita" />
+                  Visita al colegio
+                </label>
+
+                <label>
+                  <input type="checkbox" name="Intereses" value="Admisiones" />
+                  Admisiones
+                </label>
+
+                <label>
+                  <input type="checkbox" name="Intereses" value="Becas" />
+                  Becas
+                </label>
+              </div>
+            </fieldset>
+
+            <label class="t" for="info-mensaje">Mensaje (opcional)</label>
+            <textarea id="info-mensaje" name="Mensaje" rows="4"></textarea>
+
+            <input
+              type="hidden"
+              name="_subject"
+              value="Solicitud de información"
+            />
+
+            <button class="btn" type="submit">Solicitar información</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- Se carga desde partials/footer.html. -->
+    <div id="footer-placeholder"></div>
+
+    <script>
+      "use strict";
+
+      /* ==========================================================
+       IMÁGENES DEL SLIDER — EDITA ESTE ARREGLO
+
+       Un objeto = una diapositiva.
+       Las diapositivas aparecen en el orden de este arreglo.
+
+       titulo:      título visible.
+       imagen:      URL o ruta desde index.html, sin ../.
+       alt:         descripción accesible de la fotografía.
+       descripcion: texto opcional; déjalo "" para no mostrarlo.
+       posicion:    encuadre, por ejemplo "center" o "center 30%".
+
+       Ejemplo de ruta propia:
+       imagen: "assets/img/instalaciones/biblioteca.webp"
+
+       Agrega o elimina objetos completos, respetando las comas.
+       Las imágenes actuales son referenciales.
+       ========================================================== */
+
+      const INSTALACIONES = [
+        {
+          titulo: "Aulas y laboratorios",
+          imagen:
+            "https://images.unsplash.com/photo-1771765812031-22653b4c70a6?auto=format&fit=crop&w=1600&q=75",
+          alt: "Fotografía referencial de las instalaciones",
+          descripcion: "",
+          posicion: "center",
+        },
+        {
+          titulo: "Biblioteca",
+          imagen:
+            "https://images.unsplash.com/photo-1682795773426-f4e2e3e93288?auto=format&fit=crop&w=1600&q=75",
+          alt: "Fotografía referencial de la biblioteca",
+          descripcion: "",
+          posicion: "center",
+        },
+        {
+          titulo: "Canchas y deportes",
+          imagen:
+            "https://images.unsplash.com/photo-1702569802639-9b90f3c21f98?auto=format&fit=crop&w=1600&q=75",
+          alt: "Fotografía referencial de espacios deportivos",
+          descripcion: "",
+          posicion: "center",
+        },
+        {
+          titulo: "Patios de recreación",
+          imagen:
+            "https://images.unsplash.com/photo-1682795773426-f4e2e3e93288?auto=format&fit=crop&w=1600&q=75",
+          alt: "Fotografía referencial de espacios de recreación",
+          descripcion: "",
+          posicion: "center",
+        },
+      ];
+
+      /* ==========================================================
+       LÓGICA DEL INICIO
+       No necesitas editarla para cambiar o agregar fotografías.
+       ========================================================== */
+
+      document.addEventListener(
+        "DOMContentLoaded",
+        () => {
+          // Los scripts defer ya se ejecutaron antes de este evento.
+          window.lucide?.createIcons();
+
+          const track = document.getElementById("instalaciones-track");
+          const anterior = document.getElementById("instalaciones-anterior");
+          const siguiente = document.getElementById("instalaciones-siguiente");
+          const contador = document.getElementById("instalaciones-contador");
+          const controles = document.getElementById("instalaciones-controles");
+          const aviso = document.getElementById("instalaciones-aviso");
+
+          // Ignora entradas sin una ruta de imagen.
+          const datos = INSTALACIONES.filter(
+            (item) =>
+              item && typeof item.imagen === "string" && item.imagen.trim(),
+          );
+
+          // Admite un arreglo vacío sin romper la página.
+          if (!datos.length) {
+            track.hidden = true;
+            controles.hidden = true;
+            aviso.hidden = false;
+            return;
+          }
+
+          // Inserta textos sin interpretar etiquetas HTML.
+          function crear(etiqueta, clase, texto) {
+            const elemento = document.createElement(etiqueta);
+            elemento.className = clase;
+
+            if (texto != null) {
+              elemento.textContent = texto;
+            }
+
+            return elemento;
+          }
+
+          // Construye todas las diapositivas fuera del documento.
+          const fragmento = document.createDocumentFragment();
+
+          datos.forEach((item, indice) => {
+            const slide = crear("article", "inicio-slide");
+
+            slide.setAttribute("role", "group");
+            slide.setAttribute("aria-roledescription", "diapositiva");
+            slide.setAttribute(
+              "aria-label",
+              `${indice + 1} de ${datos.length}`,
+            );
+
+            const foto = crear("img", "inicio-slide-imagen");
+
+            foto.alt = item.alt || item.titulo || "Instalaciones del colegio";
+            foto.loading = "lazy";
+            foto.decoding = "async";
+            foto.style.objectPosition = item.posicion || "center";
+
+            // Si una imagen falla, conserva el título y el fondo.
+            foto.addEventListener(
+              "error",
+              () => {
+                foto.hidden = true;
+
+                slide.append(
+                  crear("span", "inicio-slide-error", "Imagen no disponible"),
+                );
+              },
+              { once: true },
+            );
+
+            foto.src = item.imagen;
+
+            const info = crear("div", "inicio-slide-info");
+
+            info.append(
+              crear(
+                "span",
+                "inicio-slide-etiqueta",
+                `INSTALACIONES · ${String(indice + 1).padStart(2, "0")}`,
+              ),
+              crear("h3", "", item.titulo || "Nuestras instalaciones"),
+            );
+
+            if (item.descripcion) {
+              info.append(crear("p", "", item.descripcion));
+            }
+
+            slide.append(foto, info);
+            fragmento.append(slide);
+          });
+
+          // Una sola inserción en el documento.
+          track.replaceChildren(fragmento);
+
+          const slides = [...track.children];
+
+          const movimientoReducido = window.matchMedia(
+            "(prefers-reduced-motion: reduce)",
+          );
+
+          let actual = 0;
+          let cuadroPendiente = false;
+
+          // Incluye el espacio entre diapositivas en el cálculo.
+          function posicion(indice) {
+            return (
+              slides[indice].getBoundingClientRect().left -
+              slides[0].getBoundingClientRect().left
+            );
+          }
+
+          function actualizarControles() {
+            anterior.disabled = actual === 0;
+            siguiente.disabled = actual === slides.length - 1;
+
+            contador.textContent =
+              `${String(actual + 1).padStart(2, "0")} / ` +
+              `${String(slides.length).padStart(2, "0")}`;
+          }
+
+          function irA(indice, animar = true) {
+            actual = Math.max(0, Math.min(slides.length - 1, indice));
+
+            track.scrollTo({
+              left: posicion(actual),
+              behavior:
+                animar && !movimientoReducido.matches ? "smooth" : "instant",
+            });
+
+            actualizarControles();
+          }
+
+          anterior.addEventListener("click", () => irA(actual - 1));
+          siguiente.addEventListener("click", () => irA(actual + 1));
+
+          // Navegación por teclado cuando el carrusel tiene el foco.
+          track.addEventListener("keydown", (evento) => {
+            const destinos = {
+              ArrowLeft: actual - 1,
+              ArrowRight: actual + 1,
+              Home: 0,
+              End: slides.length - 1,
+            };
+
+            if (!(evento.key in destinos)) return;
+
+            evento.preventDefault();
+            irA(destinos[evento.key]);
+          });
+
+          // Actualiza el estado al deslizar con el dedo o el panel táctil.
+          // requestAnimationFrame evita procesar cada evento por separado.
+          track.addEventListener(
+            "scroll",
+            () => {
+              if (cuadroPendiente) return;
+
+              cuadroPendiente = true;
+
+              requestAnimationFrame(() => {
+                const cercano = slides.reduce((mejor, _, indice) => {
+                  const distanciaActual = Math.abs(
+                    posicion(indice) - track.scrollLeft,
+                  );
+
+                  const distanciaMejor = Math.abs(
+                    posicion(mejor) - track.scrollLeft,
+                  );
+
+                  return distanciaActual < distanciaMejor ? indice : mejor;
+                }, 0);
+
+                if (cercano !== actual) {
+                  actual = cercano;
+                  actualizarControles();
+                }
+
+                cuadroPendiente = false;
+              });
+            },
+            { passive: true },
+          );
+
+          // Conserva la diapositiva al cambiar el tamaño de pantalla.
+          let anchoAnterior = track.clientWidth;
+
+          new ResizeObserver(() => {
+            if (track.clientWidth === anchoAnterior) return;
+
+            anchoAnterior = track.clientWidth;
+            irA(actual, false);
+          }).observe(track);
+
+          actualizarControles();
+        },
+        { once: true },
+      );
+    </script>
+  </body>
 </html>

@@ -1,1 +1,657 @@
-/* Estilos específicos de index. */
+/* ==========================================================
+   INICIO · COLEGIO DON BOSCO
+
+   Las imágenes se configuran exclusivamente en index.html.
+   Este archivo controla la presentación del inicio.
+   ========================================================== */
+
+/* ===================== ESTRUCTURA Y FONDOS ===================== */
+
+.inicio-page main > .sec {
+  padding-block: clamp(56px, 6vw, 88px);
+}
+
+.inicio-page main .head {
+  max-width: 740px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.inicio-page main .head h2 {
+  margin-bottom: 16px;
+  color: var(--navy);
+  font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.inicio-page main .head p {
+  color: var(--muted);
+}
+
+.inicio-page main .head .orn {
+  margin-top: 20px;
+}
+
+.inicio-page main .split > *,
+.inicio-page .row2 > * {
+  min-width: 0;
+}
+
+.inicio-page #bienvenida,
+.inicio-page #vision {
+  background: #fff;
+}
+
+.inicio-page #instalaciones,
+.inicio-page #informacion {
+  background: var(--cream);
+}
+
+.inicio-page #red {
+  color: #fff;
+  background: linear-gradient(160deg, var(--wine-d), var(--wine));
+}
+
+/* ===================== PORTADA ===================== */
+
+.inicio-page .hero {
+  position: relative;
+  display: grid;
+  align-items: center;
+  min-height: 640px;
+  overflow: hidden;
+  color: #fff;
+
+  background: linear-gradient(
+    160deg,
+    var(--navy-d),
+    var(--navy) 55%,
+    var(--wine)
+  );
+}
+
+.inicio-page .hero-video {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  pointer-events: none;
+}
+
+/* Oscurecimiento sobre la imagen, debajo del texto. Antiguo por si se reutiliza de nuevo
+.inicio-page .hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(7, 20, 54, 0.62),
+      rgba(7, 20, 54, 0.5) 50%,
+      rgba(7, 20, 54, 0.9)
+    ),
+    linear-gradient(90deg, rgba(110, 20, 40, 0.5), transparent 65%);
+}
+*/
+
+/*Nuevo*/
+
+/* Portada sin capa de color sobre el video. */
+.inicio-page .hero::before {
+  content: none;
+}
+
+.inicio-page .hero .wrap {
+  position: relative;
+  z-index: 2;
+  padding: 230px 0 110px;
+  text-align: center;
+}
+
+.inicio-page .hero h1 {
+  max-width: 900px;
+  margin: 0 auto 26px;
+  font-size: clamp(2.6rem, 6vw, 5rem);
+  text-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+}
+
+.inicio-page .hero h1 em {
+  font-style: italic;
+  color: transparent;
+  background: var(--gold-grad);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.inicio-page .hero .orn {
+  margin-bottom: 34px;
+}
+
+.inicio-page .hero .gold-line {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  height: 5px;
+  background: var(--gold-grad);
+}
+
+/* ===================== BIENVENIDA ===================== */
+
+.inicio-page .bienvenida-cta {
+  margin-top: 8px;
+}
+
+.inicio-page #bienvenida .frame {
+  position: relative;
+  padding: 14px;
+  border: 1px solid var(--gold);
+}
+
+.inicio-page #bienvenida .frame::before {
+  content: "";
+  position: absolute;
+  inset: -10px 10px 10px -10px;
+  border: 1px solid var(--gold);
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.inicio-page .bienvenida-foto {
+  position: relative;
+  aspect-ratio: 4 / 3.2;
+  overflow: hidden;
+
+  background: linear-gradient(135deg, var(--navy), var(--navy-l));
+}
+
+.inicio-page .bienvenida-foto img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.inicio-page .bienvenida-foto::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  background: linear-gradient(
+    135deg,
+    rgba(11, 31, 75, 0.15),
+    rgba(110, 20, 40, 0.15)
+  );
+}
+
+/* ===================== SLIDER DE INSTALACIONES ===================== */
+
+/* Clases propias: no interfieren con los carruseles de otras páginas. */
+.inicio-page .inicio-slider {
+  position: relative;
+  min-width: 0;
+}
+
+.inicio-page .inicio-track {
+  display: flex;
+  gap: 18px;
+  padding-bottom: 12px;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior-x: contain;
+
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold) var(--cream);
+}
+
+.inicio-page .inicio-slide {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  flex: 0 0 100%;
+
+  min-width: 0;
+  min-height: 460px;
+
+  overflow: hidden;
+  scroll-snap-align: start;
+
+  color: #fff;
+  background: var(--navy);
+}
+
+/* La foto ocupa la diapositiva sin deformarse. */
+.inicio-page .inicio-slide-imagen {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Capa de contraste para mantener legible el texto. */
+.inicio-page .inicio-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+
+  background: linear-gradient(180deg, #07143638, #071436eb);
+}
+
+/* Borde decorativo interior. */
+.inicio-page .inicio-slide::after {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  z-index: 3;
+  border: 1px solid #e6cb8699;
+  pointer-events: none;
+}
+
+.inicio-page .inicio-slide-info {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: clamp(30px, 5vw, 65px);
+}
+
+.inicio-page .inicio-slide-etiqueta {
+  color: var(--gold-l);
+  font: 600 0.7rem var(--head);
+  letter-spacing: 0.18em;
+}
+
+.inicio-page .inicio-slide-info h3 {
+  margin: 12px 0;
+  color: #fff;
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+  overflow-wrap: break-word;
+}
+
+.inicio-page .inicio-slide-info p {
+  max-width: 550px;
+  color: #fff;
+  opacity: 0.9;
+  transition:
+    transform 0.3s,
+    opacity 0.3s;
+}
+
+.inicio-page .inicio-slide:hover .inicio-slide-info p {
+  opacity: 1;
+  transform: translateY(-4px);
+}
+
+.inicio-page .inicio-slider-controles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-top: 20px;
+}
+
+.inicio-page .inicio-slider-controles button {
+  display: grid;
+  place-items: center;
+
+  width: 48px;
+  height: 48px;
+
+  border: 1px solid var(--gold);
+  background: var(--navy);
+  color: #fff;
+
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+.inicio-page .inicio-slider-controles button:hover:not(:disabled) {
+  background: var(--wine);
+}
+
+.inicio-page .inicio-slider-controles button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.inicio-page .inicio-slider-contador {
+  min-width: 70px;
+  margin: 0;
+  text-align: center;
+  color: var(--navy);
+  font: 600 0.75rem var(--head);
+  letter-spacing: 0.1em;
+}
+
+.inicio-page .inicio-slider-aviso {
+  padding: 32px 20px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.inicio-page .inicio-slide-error {
+  position: absolute;
+  top: 26px;
+  left: 26px;
+  z-index: 2;
+
+  color: #fff;
+  font-size: 0.8rem;
+}
+
+/* Respeta hidden incluso cuando el elemento tiene display definido. */
+.inicio-page .inicio-slider [hidden] {
+  display: none;
+}
+
+/* Texto accesible sin ocupar espacio visual. */
+.inicio-page .inicio-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ===================== PILARES ===================== */
+
+.inicio-page .pilares-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: clamp(20px, 3vw, 40px);
+
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.inicio-page .pilar {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  text-align: center;
+}
+
+.inicio-page .pilar-capitel {
+  height: 18px;
+  flex-shrink: 0;
+  background: var(--navy);
+  border-top: 3px solid var(--gold);
+  border-radius: 3px 3px 0 0;
+}
+
+.inicio-page .pilar-cuerpo {
+  flex: 1;
+  margin: 0 12px;
+  padding: 30px 22px 34px;
+
+  background: var(--cream);
+  border-inline: 1px solid #e8ddc6;
+  box-shadow: 0 10px 30px rgba(7, 20, 54, 0.04);
+}
+
+.inicio-page .pilar-icono {
+  display: grid;
+  place-items: center;
+  width: 66px;
+  height: 66px;
+  margin: 0 auto 20px;
+
+  color: var(--wine);
+  background: #fff;
+  border: 1px solid #e8ddc6;
+  border-radius: 50%;
+}
+
+.inicio-page .pilar-icono svg {
+  display: block;
+  width: 30px;
+  height: 30px;
+  stroke-width: 1.6;
+}
+
+.inicio-page .pilar h3 {
+  margin: 0 0 8px;
+  color: var(--navy);
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3vw, 2.2rem);
+  line-height: 1.15;
+}
+
+.inicio-page .pilar-subtitulo {
+  display: block;
+  margin-bottom: 18px;
+  color: var(--wine);
+
+  font: 600 0.7rem/1.6 var(--head);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.inicio-page .pilar p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.8;
+  overflow-wrap: break-word;
+}
+
+.inicio-page .pilar-base {
+  height: 18px;
+  flex-shrink: 0;
+  background: var(--navy);
+  border-bottom: 3px solid var(--gold);
+  border-radius: 0 0 3px 3px;
+}
+
+.inicio-page .pilares-lema {
+  margin: 32px 0 0;
+  color: var(--wine);
+  text-align: center;
+
+  font-family: var(--serif);
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+/* ===================== RED SALESIANA ===================== */
+
+.inicio-page .red-contenido {
+  max-width: 900px;
+  text-align: center;
+}
+
+.inicio-page #red .eyebrow {
+  color: var(--gold-l);
+}
+
+.inicio-page #red .head h2 {
+  color: #fff;
+}
+
+.inicio-page #red .head p {
+  color: #f1dfe3;
+}
+
+.inicio-page .net {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 0;
+  border: 1px solid rgba(201, 162, 75, 0.5);
+}
+
+.inicio-page .net > div {
+  min-width: 0;
+  padding: 28px 18px;
+  text-align: center;
+  border-right: 1px solid rgba(201, 162, 75, 0.4);
+}
+
+.inicio-page .net > div:last-child {
+  border-right: 0;
+}
+
+.inicio-page .net b {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--gold-l);
+
+  font-family: var(--serif);
+  font-size: clamp(2.5rem, 4vw, 3.1rem);
+  line-height: 1;
+}
+
+.inicio-page .net span {
+  display: block;
+  color: #f1dfe3;
+  font-size: 0.76rem;
+  line-height: 1.7;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* ===================== FORMULARIO ===================== */
+
+/* Campos y botones conservan los estilos de styles.css. */
+.inicio-page #informacion .col {
+  max-width: 820px;
+}
+
+.inicio-page #informacion form {
+  margin: 0;
+}
+
+.inicio-page #informacion .checks label {
+  min-width: 0;
+}
+
+.inicio-page #informacion .checks input {
+  flex-shrink: 0;
+}
+
+/* ===================== RESPONSIVO ===================== */
+
+@media (max-width: 1020px) {
+  .inicio-page .hero {
+    min-height: 520px;
+  }
+
+  .inicio-page .hero .wrap {
+    padding: 170px 0 80px;
+  }
+
+  .inicio-page #bienvenida .split {
+    gap: 36px;
+  }
+}
+
+@media (max-width: 850px) {
+  .inicio-page .pilares-grid {
+    gap: 18px;
+  }
+
+  .inicio-page .pilar-cuerpo {
+    margin-inline: 8px;
+    padding: 26px 14px 28px;
+  }
+}
+
+@media (max-width: 650px) {
+  .inicio-page main > .sec {
+    padding-block: 56px;
+  }
+
+  .inicio-page main .head {
+    margin-bottom: 28px;
+  }
+
+  .inicio-page .pilares-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    max-width: 380px;
+  }
+
+  .inicio-page .pilar-cuerpo {
+    margin-inline: 14px;
+    padding: 28px 24px;
+  }
+
+  .inicio-page .pilar-subtitulo {
+    margin-bottom: 14px;
+  }
+
+  .inicio-page .pilares-lema {
+    margin-top: 28px;
+  }
+
+  .inicio-page .net {
+    grid-template-columns: 1fr;
+  }
+
+  .inicio-page .net > div {
+    padding: 24px 18px;
+    border-right: 0;
+    border-bottom: 1px solid rgba(201, 162, 75, 0.4);
+  }
+
+  .inicio-page .net > div:last-child {
+    border-bottom: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .inicio-page .inicio-slide {
+    min-height: 390px;
+  }
+}
+
+@media (max-width: 400px) {
+  .inicio-page .hero h1 {
+    font-size: 2.3rem;
+  }
+
+  .inicio-page main .eyebrow {
+    gap: 8px;
+    font-size: 0.65rem;
+    letter-spacing: 0.14em;
+  }
+
+  .inicio-page main .eyebrow::before,
+  .inicio-page main .eyebrow::after {
+    width: 22px;
+  }
+
+  .inicio-page .bienvenida-cta {
+    max-width: 100%;
+    padding-inline: 22px;
+    text-align: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .inicio-page .inicio-slide-info p {
+    transition: none;
+  }
+
+  .inicio-page .inicio-slide:hover .inicio-slide-info p {
+    transform: none;
+  }
+}
