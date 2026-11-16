@@ -30,6 +30,8 @@
   -->
     <script src="js/main.js" defer></script>
 
+    <script src="js/index.js" defer></script>
+
     <!-- ICONOS -->
     <script
       src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"
@@ -124,6 +126,72 @@
           </div>
         </div>
       </section>
+
+      <!-- NUEVO MÓDULO: las ocho vistas se editan en NUEVO_MODULO al final. -->
+      <section
+        class="sec obra-section"
+        id="nuevo-modulo"
+        aria-labelledby="obra-titulo"
+      >
+        <div class="wrap obra-layout">
+          <div class="obra-intro">
+            <h2 id="obra-titulo">Nuevo módulo en construcción</h2>
+            <span class="obra-linea" aria-hidden="true"></span>
+            <p>
+              Una nueva infraestructura para acompañar la formación y el
+              crecimiento de nuestra comunidad educativa.
+            </p>
+            <button class="obra-ver" type="button" id="obra-abrir">
+              Explorar el proyecto <span aria-hidden="true">→</span>
+            </button>
+          </div>
+          <div>
+            <div class="obra-mosaico" id="obra-mosaico"></div>
+          </div>
+        </div>
+        <noscript
+          ><p class="wrap">
+            Activa JavaScript para explorar las vistas del nuevo módulo.
+          </p></noscript
+        >
+      </section>
+
+      <dialog
+        class="obra-dialogo"
+        id="obra-dialogo"
+        aria-labelledby="obra-dialogo-titulo"
+      >
+        <div class="obra-dialogo-cabecera">
+          <h2 id="obra-dialogo-titulo">Galería del proyecto</h2>
+          <button
+            type="button"
+            class="obra-cerrar"
+            id="obra-cerrar"
+            aria-label="Cerrar galería"
+          >
+            ✕
+          </button>
+        </div>
+        <div class="obra-visor" id="obra-visor"></div>
+        <div class="obra-navegacion">
+          <button type="button" id="obra-anterior" aria-label="Vista anterior">
+            ←
+          </button>
+          <p id="obra-leyenda" aria-live="polite" aria-atomic="true"></p>
+          <button
+            type="button"
+            id="obra-siguiente"
+            aria-label="Vista siguiente"
+          >
+            →
+          </button>
+        </div>
+        <div
+          class="obra-miniaturas"
+          id="obra-miniaturas"
+          aria-label="Seleccionar una vista"
+        ></div>
+      </dialog>
 
       <!-- ===================================================
          INSTALACIONES · FONDO CREMA
@@ -466,6 +534,74 @@
        Agrega o elimina objetos completos, respetando las comas.
        Las imágenes actuales son referenciales.
        ========================================================== */
+
+      /* NUEVO MÓDULO — CAMBIA AQUÍ LAS FOTOS
+         Un objeto = una fotografía. Las primeras tres forman el mosaico.
+         Para usar tus fotos, cambia únicamente la ruta de imagen.
+         Ejemplo: imagen: "assets/img/nuevo-modulo/fachada.webp"
+         titulo y alt son opcionales; puedes ajustarlos al recibir las fotos.
+         Las fotos actuales son referencias de internet usadas en el sitio,
+         repetidas temporalmente para probar las ocho posiciones de la galería.
+         NO corresponden al nuevo módulo del colegio.
+      */
+      const NUEVO_MODULO = [
+        {
+          imagen:
+            "https://images.unsplash.com/photo-1771765812031-22653b4c70a6?auto=format&fit=crop&w=1600&q=75",
+          titulo: "Imagen de referencia 01",
+          alt: "Fotografía de referencia; no corresponde al nuevo módulo",
+          posicion: "center",
+        },
+        {
+          imagen:
+            "https://images.unsplash.com/photo-1682795773426-f4e2e3e93288?auto=format&fit=crop&w=1600&q=75",
+          titulo: "Imagen de referencia 02",
+          alt: "Fotografía de referencia; no corresponde al nuevo módulo",
+          posicion: "center",
+        },
+        {
+          imagen:
+            "https://images.unsplash.com/photo-1702569802639-9b90f3c21f98?auto=format&fit=crop&w=1600&q=75",
+          titulo: "Imagen de referencia 03",
+          alt: "Fotografía de referencia; no corresponde al nuevo módulo",
+          posicion: "center",
+        },
+        {
+          imagen:
+            "https://images.unsplash.com/photo-1771765812031-22653b4c70a6?auto=format&fit=crop&w=1600&q=75",
+          titulo: "Imagen de referencia 04",
+          alt: "Fotografía de referencia; no corresponde al nuevo módulo",
+          posicion: "center",
+        },
+        {
+          imagen:
+            "https://images.unsplash.com/photo-1682795773426-f4e2e3e93288?auto=format&fit=crop&w=1600&q=75",
+          titulo: "Imagen de referencia 05",
+          alt: "Fotografía de referencia; no corresponde al nuevo módulo",
+          posicion: "center",
+        },
+        {
+          imagen:
+            "https://images.unsplash.com/photo-1702569802639-9b90f3c21f98?auto=format&fit=crop&w=1600&q=75",
+          titulo: "Imagen de referencia 06",
+          alt: "Fotografía de referencia; no corresponde al nuevo módulo",
+          posicion: "center",
+        },
+        {
+          imagen:
+            "https://images.unsplash.com/photo-1771765812031-22653b4c70a6?auto=format&fit=crop&w=1600&q=75",
+          titulo: "Imagen de referencia 07",
+          alt: "Fotografía de referencia; no corresponde al nuevo módulo",
+          posicion: "center",
+        },
+        {
+          imagen:
+            "https://images.unsplash.com/photo-1682795773426-f4e2e3e93288?auto=format&fit=crop&w=1600&q=75",
+          titulo: "Imagen de referencia 08",
+          alt: "Fotografía de referencia; no corresponde al nuevo módulo",
+          posicion: "center",
+        },
+      ];
 
       const INSTALACIONES = [
         {
